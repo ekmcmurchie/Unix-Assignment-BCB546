@@ -1,4 +1,4 @@
-# McMurchie UNIX Assignment
+ # McMurchie UNIX Assignment
 
 ## Data Inspection
 
@@ -16,10 +16,10 @@ less fang_et_al_genotypes.txt
 ```
 wc fang_et_al_genotypes.txt
 ```
-3. I then checked the number of columns in the file, using awk rather than counting. Although I suspected that the number of columns was the same in the header and in the rest of the file, I checked both.
+3. I then checked the number of columns in the file, using awk rather than counting. Although I suspected that the number of columns was the same in the header and other parts of the file, I checked both.
 ```
 awk -F "\t" '{print NF; exit}' fang_et_al_genotypes.txt
-grep -v "^#" fang_et_al_genotypes.txt | awk -F "\t" '{print NF; exit}'
+tail -n +5 fang_et_al_genotypes.txt | awk -F "\t" '{print NF; exit}' 
 ```
 4. Finally, I checked the file size with my preferred (human readable) method
 ```
@@ -51,7 +51,7 @@ wc snp_position.txt
 3. I then checked the number of columns in the file using awk. While I suspected that the number of columns was the same in the header and in the rest of the file, I checked both, as I did with the fang_et_al_genotypes.txt file.
 ```
 awk -F "\t" '{print NF; exit}' snp_position.txt
-grep -v "^#" snp_position.txt | awk -F "\t" '{print NF; exit}'
+tail -n +5 snp_position.txt | awk -F "\t" '{print NF; exit}' 
 ```
 4. Finally, I checked the file size with du
 ```
@@ -64,9 +64,9 @@ By inspecting this file I learned that:
 3. There are 15 columns throughout the file.
 4. The file size is 41K.
 
-##Data Processing
+## Data Processing
 
-###Maize Data
+### Maize Data
 
 ```
 here is my snippet of code used for data processing
@@ -75,7 +75,7 @@ here is my snippet of code used for data processing
 Here is my brief description of what this code does
 
 
-###Teosinte Data
+### Teosinte Data
 
 ```
 here is my snippet of code used for data processing
