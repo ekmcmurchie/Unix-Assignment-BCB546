@@ -28,7 +28,7 @@ du -h fang_et_al_genotypes.txt
 
 By inspecting this file I learned that:
 
-1. This file contains a header that is one line long. The header names the contents of each column, including sample ID (Sample_ID), what appears to be opertational taxonomic unit (]G_OTU), Group, and SNP ID. Following the one line header is SNP data, showing the potential base pairs for the SNPs.The end of the file appears to follow the same format as the rest of the file, excluding header.
+1. This file contains a header that is one line long. The header names the contents of each column, including sample ID (Sample_ID), what appears to be opertational taxonomic unit (]G_OTU), Group, and a list of SNP IDs. Following the one line header is SNP data, showing the potential base pairs for the SNPs. The end of the file appears to follow the same format as the rest of the file, excluding header.
 2. There are 2783 lines, 2744038 words, and 11051939 characters (bytes) in this file. 
 3. There are 986 columns throughout the file.
 4. The file size is 6.6M.
