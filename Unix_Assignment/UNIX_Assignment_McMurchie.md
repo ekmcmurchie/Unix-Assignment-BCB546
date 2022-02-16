@@ -71,7 +71,7 @@ Before processing the genotypes files, I did some initial processing on the SNP 
 
 First, I cut the SNP positions file so that it contained only SNP_ID, Chromosome, and Position, which are the three columns we wish to join to the genotype data.
 ```
-cut -f 1,3,4 snp_position.txt > cut_snp_position
+cut -f 1,3,4 snp_position.txt > cut_snp_position.txt
 sort -c -k1,1 cut_snp_position.txt
 ```
 This cuts the SNP position file so we only have column 1 (SNP_ID), column 3 (Chromosome), column 4 (Position) and checks whether the file is sorted based on column 1 (SNP_ID). Since the file was not sorted, I had to sort it.

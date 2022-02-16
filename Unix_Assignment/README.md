@@ -7,6 +7,16 @@
 * The two files `fang_et_al_genotypes.txt` and `snp_positions.txt` are data files you will be reformatting for the assignment
 * The `transpose.awk` script will be needed to transpose the data (see instructions in `UNIX_Assignment.md`)
 
-### I have added the following files:
+### I have added the following files to this directory:
 
-* `UNIX_Assignment_MCMurchie.md`: This is my markdown file containing my answers for the assignment. 
+* `UNIX_Assignment_MCMurchie.md`: This is my markdown file containing my answers for the assignment.
+
+### I have also added the following directories, which contain my intermediate and final files:
+
+* `intermediate_files`: This directory contains my intermediate files, including a copy of the `transpose.awk` script. 
+* `final_files`: This directory contains my final, processed files.
+
+Please see the README in each directory for a list of files within them.
+
+
+ 
