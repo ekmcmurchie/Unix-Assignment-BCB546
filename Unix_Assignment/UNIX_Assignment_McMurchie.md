@@ -79,8 +79,9 @@ This cuts the SNP position file so we only have column 1 (SNP_ID), column 3 (Chr
 sort -k1,1 cut_snp_position.txt > sorted_snp_position.txt
 sort -c -k1,1 sorted_snp_position.txt
 less sorted_snp_position.txt
+wc sorted_snp_position.txt
 ```
-This sorts the cut SNP position file based on SNP ID and checks my work (it is now sorted based on column 1, SNP ID, and `less` enabled us to observe the file to make sure it looked as it should). With this file prepared for joining, I then moved on to working with the genotypes files.
+This sorts the cut SNP position file based on SNP ID and checks my work (it is now sorted based on column 1, SNP ID, and `less` enabled us to observe the file to make sure it looked as it should). With this file prepared for joining, I then moved on to working with the genotypes files. The `wc` command showed us that `sorted_snp_position.txt` has 984 lines, which will be useful for checking whether the `join` we will do later is successful.
 
 
 ### Maize Data
@@ -112,16 +113,18 @@ Then I sorted the transposed maize genotypes file so that I could join it with t
 ```
 sort -k1,1 transposed_maize_genotypes.txt > sort_maize_genotypes.txt
 sort -c -k1,1 sort_maize_genotypes.txt
+wc sort_maize_genotypes.txt
 ```
-This sorted the transposed maize genotypes file based on the first column, which contains SNP ID, and checked the resulting file to make sure that the sort worked.
+This sorted the transposed maize genotypes file based on the first column, which contains SNP ID, and checked the resulting file to make sure that the sort worked. The `sort_maize_genotypes.txt` file has 986 lines, which will be useful to help us check whether the join is successful.
 
 I then joined the sorted maize genotypes file and the cut, sorted SNP positions file:
 ```
 join -1 1 -2 1 sorted_snp_position.txt sort_maize_genotypes.txt > join_maize.txt
 head join_maize.txt
 less join_maize.txt
+wc join_maize.txt
 ```
-To make sure that the join was successful, I viewed the beginning of the file with `head` and used `less` to scroll through it.
+To make sure that the join was successful, I viewed the beginning of the file with `head` and used `less` to scroll through it. The `wc` command shows us that the `join_maize.txt` file has 983 lines, slightly shorter than `sorted_snp_position.txt` and `sort_maize_genotypes.txt` because the line containing "SNP_ID" is not copied over from `sorted_snp_position.txt` and the lines comtianing "Sample_ID", "]G_OTU", and "Group" are not copied over from `sort_maize_genotypes.txt`.
 
 
 To prepare to make the 10 files with SNP ordered based on increasing position value, I sorted the joined maize SNP position and data file based on chromosome number first and position second:
@@ -215,16 +218,20 @@ Next I sorted the transposed teosinte genotypes file so that I could join it wit
 ```
 sort -k1,1 transposed_teosinte_genotypes.txt > sort_teosinte_genotypes.txt
 sort -c -k1,1 sort_teosinte_genotypes.txt
+wc sort_teosinte_genotypes.txt
 ```
-This sorted the transposed teosinte genotypes file based on the first column, which contains SNP ID, and checked that the sort was successful.
+This sorted the transposed teosinte genotypes file based on the first column, which contains SNP ID, and checked that the sort was successful. The `wc` command shows us that there are 986 lines in the `sort_teosinte_genotypes.txt` file.
 
 I then joined the sorted teosinte genotypes file and the cut, sorted SNP positions file:
 ```
 join -1 1 -2 1 sorted_snp_position.txt sort_teosinte_genotypes.txt > join_teosinte.txt
 head join_teosinte.txt
 less join_teosinte.txt
+wc join_teosinte.txt
 ```
-Since this was a tricky step, I used both `head` and `less` to view my work here.
+Since this was a tricky step, I used both `head` and `less` to view my work here, as well as using `wc` to view the resulting number of lines. There are 983 lines in the `join_teosinte.txt` file, slightly shorter than `sorted_snp_positi
+on.txt` and `sort_teosinte_genotypes.txt` because the line containing "SNP_ID" is not copied over from `sorted_snp_position.txt` and the lines comtianing "Sample_ID", "]G_OTU", and "Group" are not copied over from `sort_teosinte_genotypes.txt`.
+
 
 
 Then I sorted the joined teosinte SNP position and data file based on chromosome number first and position second, checking my work with `less`, as I did with the maize file:
