@@ -14,7 +14,7 @@
 ### I have also added the following directories, which contain my intermediate and final files:
 
 * `intermediate_files`: This directory contains my intermediate files, including a copy of the `transpose.awk` script. 
-* `final_files`: This directory contains my final, processed files.
+* `final_files`: This directory contains my final, processed files. The subdirectory `final_maize` contains my final maize files and the subdirectory `final_teosinte` contains my final teosinte files.
 
 Please see the README in each directory for a list of files within them.
 

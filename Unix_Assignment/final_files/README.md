@@ -2,7 +2,9 @@
 
 Below is a list of my final files for the UNIX assignment.
 
-### Maize files:
+### Maize files in the `final_maize` directory:
+* README.md file explaining contents of the directory
+
 * 10 files (1 for each chromosome) with SNPs ordered based on increasing position values and with missing data encoded by this symbol: ?
 1. `chr1_maize_question.txt`: Chromosome 1
 2. `chr2_maize_question.txt`: Chromosome 2
@@ -33,7 +35,9 @@ Below is a list of my final files for the UNIX assignment.
 * 1 file with all SNPs with multiple positions in the genome
 1. `multiple_maize_snp.txt`
 
-### Teosinte files:
+### Teosinte files in the `final_teosinte` directory:
+* README.md file explaining contents of the directory
+
 * 10 files (1 for each chromosome) with SNPs ordered based on increasing position values and with missing data encoded by this symbol: ?
 1. `chr1_teosinte_question.txt`: Chromosome 1
 2. `chr2_teosinte_question.txt`: Chromosome 2
