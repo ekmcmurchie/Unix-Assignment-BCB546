@@ -1,5 +1,5 @@
 ## Final processed teosinte files
-This directory contains my 22 final processed teosinte files
+This directory contains my 22 final processed teosinte files.
 
 ### Teosinte files in the `final_teosinte` directory:
 * 10 files (1 for each chromosome) with SNPs ordered based on increasing position values and with missing data encoded by this symbol: ?
